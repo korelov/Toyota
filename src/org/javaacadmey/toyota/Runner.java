@@ -44,13 +44,17 @@ public class Runner {
         warehouse.addCar(hiace);
         warehouse.addCar(dyna);
 
-        for (Buyer buyer : buyers) {
+        double costPrice = 0;
+        for (int i = 0, buyersLength = buyers.length; i < buyersLength; i++) {
+            Buyer buyer = buyers[i];
             Vehicle vehicle = manager.sellVehicle(buyer, warehouse, assemblyLine);
             if (vehicle != null) {
                 Cashier.setAccountIncome(vehicle.getCost());
+                costPrice += vehicle.getModel().getCostPrice();
             }
         }
-
         System.out.println("Общая выручка " + Cashier.getAccountIncome());
+        System.out.println("Себистоимость " + costPrice);
+        System.out.println("Выручка " + (Cashier.getAccountIncome() - costPrice));
     }
 }

@@ -7,14 +7,12 @@ import org.javaacadmey.toyota.vehicle.components.*;
 import static org.javaacadmey.toyota.vehicle.toyota.Toyota.SOLARA;
 
 public class Solara extends Cabriolet {
-    private static final String MODEL = SOLARA.getModel();
-
     private final Fridge fridge;
 
     public Solara(String color, Wheel[] wheels, FuelTank fuelTank, Engine engine,
                   Electrics electrics, Headlights headlights, double cost, Country country,
                   Cruise cruise, Roof roof, Fridge fridge) {
-        super(MODEL, color, SOLARA.getMaxSpeed(), Transmission.ROBOT, wheels, fuelTank, engine,
+        super(SOLARA, color, SOLARA.getMaxSpeed(), Transmission.ROBOT, wheels, fuelTank, engine,
                 electrics, headlights, cost, country, cruise, roof);
         this.fridge = fridge;
     }

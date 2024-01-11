@@ -2,11 +2,12 @@ package org.javaacadmey.toyota.vehicle;
 
 import org.javaacadmey.toyota.factory.Country;
 import org.javaacadmey.toyota.vehicle.components.*;
+import org.javaacadmey.toyota.vehicle.toyota.Toyota;
 
 public abstract class Cabriolet extends PassengerCar {
     private final Roof roof;
 
-    public Cabriolet(String model, String color, int maxSpeed, Transmission transmission,
+    public Cabriolet(Toyota model, String color, int maxSpeed, Transmission transmission,
                      Wheel[] wheels, FuelTank fuelTank, Engine engine, Electrics electrics,
                      Headlights headlights, double cost,
                      Country country, Cruise cruise, Roof roof) {

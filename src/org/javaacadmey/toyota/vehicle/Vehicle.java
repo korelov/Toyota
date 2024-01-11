@@ -3,9 +3,10 @@ package org.javaacadmey.toyota.vehicle;
 import org.javaacadmey.toyota.exception.StartCarException;
 import org.javaacadmey.toyota.factory.Country;
 import org.javaacadmey.toyota.vehicle.components.*;
+import org.javaacadmey.toyota.vehicle.toyota.Toyota;
 
 public abstract class Vehicle {
-    private final String model;
+    private final Toyota model;
     private final String color;
     private int maxSpeed;
     private Transmission transmission;
@@ -18,7 +19,7 @@ public abstract class Vehicle {
     private final double cost;
     private final Country country;
 
-    public Vehicle(String model, String color, int maxSpeed, Transmission transmission,
+    public Vehicle(Toyota model, String color, int maxSpeed, Transmission transmission,
                    Wheel[] wheels, FuelTank fuelTank, Engine engine, Electrics electrics,
                    Headlights headlights, double cost, Country country) {
         this.model = model;
@@ -58,7 +59,7 @@ public abstract class Vehicle {
         headlights.setWork(false);
     }
 
-    public String getModel() {
+    public Toyota getModel() {
         return model;
     }
 

@@ -1,6 +1,7 @@
 package org.javaacadmey.toyota.factory;
 
 import org.javaacadmey.toyota.vehicle.Vehicle;
+import org.javaacadmey.toyota.vehicle.toyota.Toyota;
 
 public class Warehouse {
     private int vehicleLimit = 1000;
@@ -42,7 +43,7 @@ public class Warehouse {
         }
     }
 
-    private void vehicleCount(String model, boolean addGetVehicle) {
+    private void vehicleCount(Toyota model, boolean addGetVehicle) {
         int incDec;
         if (addGetVehicle) {
             incDec = 1;
@@ -50,14 +51,14 @@ public class Warehouse {
             incDec = -1;
         }
         switch (model) {
-            case "Camry" -> countCamry = countCamry + incDec;
-            case "Dyna" -> countDyna = countDyna + incDec;
-            case "Hiace" -> countHiace = countHiace + incDec;
-            case "Solara" -> countSolara = countSolara + incDec;
+            case CAMRY -> countCamry = countCamry + incDec;
+            case DYNA -> countDyna = countDyna + incDec;
+            case HIACE -> countHiace = countHiace + incDec;
+            case SOLARA -> countSolara = countSolara + incDec;
         }
     }
 
-    public Vehicle getVehicle(String model) {
+    public Vehicle getVehicle(Toyota model) {
         for (int i = 0; i < vehicles.length; i++) {
             if (vehicles[i] != null && vehicles[i].getModel().equals(model)) {
                 vehicleCount(vehicles[i].getModel(), false);
