@@ -28,7 +28,7 @@ public class Warehouse {
         return countSolara;
     }
 
-    public void addCar(Vehicle vehicle) {
+    public void addVehicle(Vehicle vehicle) {
         if (vehicleLimit == 0) {
             System.out.println("Нет мест");
         }

@@ -39,10 +39,10 @@ public class Runner {
         Hiace hiace = assemblyLine.createHiace("Black", 15_000);
         Dyna dyna = assemblyLine.createDyna("Black", 22_000);
 
-        warehouse.addCar(camry);
-        warehouse.addCar(solara);
-        warehouse.addCar(hiace);
-        warehouse.addCar(dyna);
+        warehouse.addVehicle(camry);
+        warehouse.addVehicle(solara);
+        warehouse.addVehicle(hiace);
+        warehouse.addVehicle(dyna);
 
         double costPrice = 0;
         for (int i = 0, buyersLength = buyers.length; i < buyersLength; i++) {
